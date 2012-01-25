@@ -8,7 +8,7 @@ class RedirectPage(webapp.RequestHandler):
         path = self.request.path
         if path.endswith("/"):
             path += "index.html"
-        self.redirect(urlparse.urljoin('https://d31nkok4v6vad6.cloudfront.net/archive/', path.strip("/")))
+        self.redirect(urlparse.urljoin('https://d31nkok4v6vad6.cloudfront.net/static/', path.strip("/")))
 
     def post(self):
         self.handle()
